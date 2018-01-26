@@ -16,7 +16,7 @@
             <div id="dialerContent">
                 <h1>Dialer</h1>
                 <form class="pure-form pure-form-stacked">
-                    <input class="textBox" id="dialNumberTextBox" placeholder="">
+                    <input class="textBox" id="dialNumberInput" placeholder="">
                 </form>
                 <div class="grid">
                     <div class="pure-button keypad 1">1</div>
@@ -43,6 +43,21 @@
             <div id="addContactContent">
                 <h1>Add Contact</h1>
                 <form class="pure-form pure-form-stacked">
+                    <label for="nameInput">Name</label>
+                    <input class="textBox"
+                        id="nameInput"
+                        placeholder="Jane Smith">
+                    <label for="phoneNumberInput">Phone number</label>
+                    <input class="textBox"
+                        id="phoneNumberInput"
+                        placeholder="(123) 456-7890">
+                    <label for="emailAddressInput">Email address</label>
+                    <input class="textBox"
+                        id="emailAddressInput"
+                        placeholder="jane.smith@colorado.edu">
+                    <input type="submit" value="Add Contact" class="pure-button"></input>
+                    <div class="pure-button">Clear</div>
+                </form>
             </div>
         </div>
 
