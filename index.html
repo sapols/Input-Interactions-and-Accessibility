@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shawn's Phone App</title>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+        <link rel="stylesheet" href="phone.css">
+    </head>
+    <body>
+        <div id="tab_bar">
+            <button class="pure-button tab" id="dialerTab">Dialer</button>
+            <button class="pure-button tab" id="contactListTab">Contact List</button>
+            <button class="pure-button tab" id="addContactTab">Add Contact</button>
+        </div>
+        <div id="mainContent">
+            <div id="dialerContent">
+                <h1>Dialer</h1>
+                <form class="pure-form pure-form-stacked">
+                    <input class="textBox" id="dialNumberInput" placeholder="">
+                </form>
+                <div class="keypadGrid">
+                    <div class="pure-button keypad one">1</div>
+                    <div class="pure-button keypad two">2</div>
+                    <div class="pure-button keypad three">3</div>
+                    <div class="pure-button keypad four">4</div>
+                    <div class="pure-button keypad five">5</div>
+                    <div class="pure-button keypad six">6</div>
+                    <div class="pure-button keypad seven">7</div>
+                    <div class="pure-button keypad eight">8</div>
+                    <div class="pure-button keypad nine">9</div>
+                    <div class="pure-button keypad asterisk">*</div>
+                    <div class="pure-button keypad zero">0</div>
+                    <div class="pure-button keypad octothorp">#</div>
+                </div>
+                <div class="dialAndClearGrid">
+                    <div class="pure-button keypad dial">Dial</div>
+                    <div class="pure-button keypad clear">Clear</div>
+                </div>
+            </div>
+            <div id="contactListContent">
+                <h1>Contact List</h1>
+                <div id="contactList">
+                    <div class="pure-button contact">Shawn Polson</div>
+                    <div class="pure-button contact">Dana Green</div>
+                    <div class="pure-button contact">Bill Nye</div>
+                    <div class="pure-button contact">Neil Tyson</div>
+                    <div class="pure-button contact">Steven Novella</div>
+                    <div class="pure-button contact">Cara Santa Maria</div>
+                    <div class="pure-button contact">Bob Dylan</div>
+                    <div class="pure-button contact">Mom</div>
+                    <div class="pure-button contact">Stephen Colbert</div>
+                    <div class="pure-button contact">Jon Stewart</div>
+                    <div class="pure-button contact">Scott Sieke</div>
+                </div>
+            </div>
+            <div id="addContactContent">
+                <h1>Add Contact</h1>
+                <form class="pure-form pure-form-stacked">
+                    <label for="nameInput">Name</label>
+                    <input class="textBox"
+                        id="nameInput"
+                        placeholder="Jane Smith">
+                    <label for="phoneNumberInput">Phone number</label>
+                    <input class="textBox"
+                        id="phoneNumberInput"
+                        placeholder="(123) 456-7890">
+                    <label for="emailAddressInput">Email address</label>
+                    <input class="textBox"
+                        id="emailAddressInput"
+                        placeholder="jane.smith@colorado.edu">
+                    <input type="submit" value="Add Contact" class="pure-button"></input>
+                    <div class="pure-button">Clear</div>
+                </form>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="phone.js"></script>
+    </body>
+</html>
