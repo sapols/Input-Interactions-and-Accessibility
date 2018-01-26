@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="phone.css">
     </head>
     <body>
-
         <div id="tab_bar">
             <button class="pure-button tab" id="dialerTab">Dialer</button>
             <button class="pure-button tab" id="contactListTab">Contact List</button>
@@ -18,18 +17,21 @@
                 <form class="pure-form pure-form-stacked">
                     <input class="textBox" id="dialNumberInput" placeholder="">
                 </form>
-                <div class="grid">
-                    <div class="pure-button keypad 1">1</div>
-                    <div class="pure-button keypad 2">2</div>
-                    <div class="pure-button keypad 3">3</div>
-                    <div class="pure-button keypad 4">4</div>
-                    <div class="pure-button keypad 5">5</div>
-                    <div class="pure-button keypad 6">6</div>
-                    <div class="pure-button keypad 7">7</div>
-                    <div class="pure-button keypad 8">8</div>
-                    <div class="pure-button keypad 9">9</div>
+                <div class="keypadGrid">
+                    <div class="pure-button keypad one">1</div>
+                    <div class="pure-button keypad two">2</div>
+                    <div class="pure-button keypad three">3</div>
+                    <div class="pure-button keypad four">4</div>
+                    <div class="pure-button keypad five">5</div>
+                    <div class="pure-button keypad six">6</div>
+                    <div class="pure-button keypad seven">7</div>
+                    <div class="pure-button keypad eight">8</div>
+                    <div class="pure-button keypad nine">9</div>
                     <div class="pure-button keypad asterisk">*</div>
+                    <div class="pure-button keypad zero">0</div>
                     <div class="pure-button keypad octothorp">#</div>
+                </div>
+                <div class="dialAndClearGrid">
                     <div class="pure-button keypad dial">Dial</div>
                     <div class="pure-button keypad clear">Clear</div>
                 </div>
@@ -60,7 +62,6 @@
                 </form>
             </div>
         </div>
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="phone.js"></script>
     </body>
