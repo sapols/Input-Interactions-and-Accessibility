@@ -24,13 +24,13 @@
     grid-gap: 10px 10px;
 }
 .dialAndClearGrid {
-    margin-top: 10px;
+    margin-top: 10px !important;
     height: 60px;
     width: 315px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-gap: 10px 10px;
+    grid-gap: 10px 10px !important;
 }
 
 .one, .two, .three,
