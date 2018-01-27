@@ -125,16 +125,24 @@ $("#addContactButton").click(function() {
     var contactName = $("#nameInput").val();
     var contacts = document.getElementById("contactList");
 
-    var newDiv = document.createElement("div");
-    var classAttr = document.createAttribute("class"); //Create a "class" attribute
-    classAttr.value = "pure-button contact"; //Set the value of the class attribute
-    newDiv.setAttributeNode(classAttr); //Add the class attribute to the new div
-    var styleAttr = document.createAttribute("style")
-    styleAttr.value = "margin: 5px 2px 5px 2px !important";
-    newDiv.setAttributeNode(styleAttr);
-    newDiv.innerHTML = contactName;
+    if (contactName != "") {
+        var newDiv = document.createElement("div");
+        var classAttr = document.createAttribute("class"); //Create a "class" attribute
+        classAttr.value = "pure-button contact"; //Set the value of the class attribute
+        newDiv.setAttributeNode(classAttr); //Add the class attribute to the new div
+        var styleAttr = document.createAttribute("style")
+        styleAttr.value = "margin: 5px 2px 5px 2px !important";
+        newDiv.setAttributeNode(styleAttr);
+        newDiv.innerHTML = contactName;
 
-    contacts.appendChild(newDiv);
+        contacts.appendChild(newDiv);
+
+        //Show success message for 2 seconds
+        $("#successMessage").css('visibility', 'visible');
+        setTimeout(function() {
+            $("#successMessage").css('visibility', 'hidden');
+        }, 2000);
+    }
 });
 $("#clearContactButton").click(function() {
     $("#nameInput").val("");
