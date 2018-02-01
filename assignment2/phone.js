@@ -2,7 +2,9 @@ $(document).ready(function() {       //Do this when the document is loaded
     $("#dialerContent").show();      //Show the element with ID ""
     $("#contactListContent").hide(); //Hide the element with ID "contactListContent"
     $("#addContactContent").hide();
+    $("#gesturePracticeContent").hide();
     $("#dialerTab").css('background-color', 'white');
+    $("#gesture_output").val("ready");
 });
 
 //Tab functionality
@@ -10,28 +12,45 @@ $("#dialerTab").click(function() { //When "dialerTab" is clicked
     $("#dialerContent").show();
     $("#contactListContent").hide();
     $("#addContactContent").hide();
+    $("#gesturePracticeContent").hide();
 
     $("#dialerTab").css('background-color', 'white');
     $("#contactListTab").css('background-color', '#E6E6E6');
     $("#addContactTab").css('background-color', '#E6E6E6');
+    $("#gesturePracticeTab").css('background-color', '#E6E6E6');
 });
 $("#contactListTab").click(function() { //When "contactListTab" is clicked
     $("#contactListContent").show();
     $("#dialerContent").hide();
     $("#addContactContent").hide();
+    $("#gesturePracticeContent").hide();
 
     $("#contactListTab").css('background-color', 'white');
     $("#dialerTab").css('background-color', '#E6E6E6');
     $("#addContactTab").css('background-color', '#E6E6E6');
+    $("#gesturePracticeTab").css('background-color', '#E6E6E6');
 });
 $("#addContactTab").click(function() { //When "addContactTab" is clicked
     $("#addContactContent").show();
     $("#dialerContent").hide();
     $("#contactListContent").hide();
+    $("#gesturePracticeContent").hide();
 
     $("#addContactTab").css('background-color', 'white');
     $("#contactListTab").css('background-color', '#E6E6E6');
     $("#dialerTab").css('background-color', '#E6E6E6');
+    $("#gesturePracticeTab").css('background-color', '#E6E6E6');
+});
+$("#gesturePracticeTab").click(function() { //When "gesturePracticeTab" is clicked
+    $("#gesturePracticeContent").show();
+    $("#addContactContent").hide();
+    $("#dialerContent").hide();
+    $("#contactListContent").hide();
+
+    $("#gesturePracticeTab").css('background-color', 'white');
+    $("#contactListTab").css('background-color', '#E6E6E6');
+    $("#dialerTab").css('background-color', '#E6E6E6');
+    $("#addContactTab").css('background-color', '#E6E6E6');
 });
 
 //----"Backend" functionality---------------------------------------------------
@@ -148,4 +167,35 @@ $("#clearContactButton").click(function() {
     $("#nameInput").val("");
     $("#phoneNumberInput").val("");
     $("#emailAddressInput").val("");
+});
+
+//Gesture Practice tab
+
+var mouseDownX = 0;
+var mouseDownY = 0;
+var mouseUpX = 0;
+var mouseUpY = 0;
+
+$("#gesture_area").mousedown(function(event) {
+    mouseDownX = event.pageX;
+    mouseDownY = event.pageY;
+    $("#gesture_output").val("mouse down");
+});
+$("#gesture_area").mouseup(function(event) {
+    mouseUpX = event.pageX;
+    mouseUpY = event.pageY;
+
+    if (mouseUpX < mouseDownX) {
+        $("#gesture_output").val("swipe left");
+    }
+    else if (mouseUpX > mouseDownX) {
+        $("#gesture_output").val("swipe right");
+    }
+    else {
+        $("#gesture_output").val("mouse up");
+    }
+});
+
+$("#gesture_area").mouseleave(function() {
+    $("#gesture_output").val("ready");
 });

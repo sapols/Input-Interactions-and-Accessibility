@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Shawn's Phone App 2!</title>
+        <title>Shawn's Phone App v2!</title>
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
         <link rel="stylesheet" href="phone.css">
     </head>
@@ -10,6 +10,7 @@
             <button class="pure-button tab" id="dialerTab">Dialer</button>
             <button class="pure-button tab" id="contactListTab">Contact List</button>
             <button class="pure-button tab" id="addContactTab">Add Contact</button>
+            <button class="pure-button tab" id="gesturePracticeTab">Test Gestures</button>
         </div>
         <div id="mainContent">
             <div id="dialerContent">
@@ -71,6 +72,13 @@
                     <div class="pure-button" id="clearContactButton">Clear</div>
                 </form>
                 <p id="successMessage" style="visibility='hidden'">Contact added</p>
+            </div>
+            <div id="gesturePracticeContent">
+                <h1>Gesture Practice</h1>
+                <input id="gesture_output"></input>
+                <div id="gesture_area">
+
+                </div>
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
