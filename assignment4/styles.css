@@ -3,6 +3,10 @@ body {
     margin: 20px;
 }
 
+.legend, #legend {
+    display: none !important;
+}
+
 #alert {
     border: 1px solid black;
     background: yellow;
