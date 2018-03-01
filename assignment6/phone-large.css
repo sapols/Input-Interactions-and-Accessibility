@@ -49,17 +49,22 @@ h1 {
 
 .keypadGrid {
     margin-top: 20px;
-    height: 280px;
+    height: 480px;
     width: 315px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 10px 10px;
 }
+.keypadGrid .pure-button {
+    padding: 1em 1.6em;
+    font-size: 300%;
+}
 .dialAndClearGrid {
-    margin-top: 50px;
+    margin-top: 150px;
     height: 60px;
     width: 315px;
+    padding: 2em 2.6em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
