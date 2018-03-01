@@ -1,1 +1,124 @@
 /*comment!*/
+#tab_bar {
+    background-color: black;
+}
+
+/* Dialer tab */
+
+#dialerTab {
+    margin-left: 10px;
+}
+
+.current-tab {
+    color: yellow !important;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    font-size: 200%;
+}
+
+#mainContent h1 {
+    font-size: x-large;
+}
+
+.pure-botton {
+    background-color: black !important;
+    color: white !important;
+    border: 1px solid white !important;
+}
+
+#mainContent {
+    background-color: black;
+    margin-left: 15px;
+}
+
+#dialNumberInput {
+    width: calc(75vw);
+    text-align: center;
+    transition: : .5s ease;
+    background-color: black;
+    font-size: 200%;
+    border: 1px solid white;
+    color: white;
+}
+
+.keypadGrid {
+    margin-top: 20px;
+    height: 280px;
+    width: 315px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px 10px;
+}
+.dialAndClearGrid {
+    margin-top: 50px;
+    height: 60px;
+    width: 315px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px 10px;
+}
+
+.one, .two, .three,
+.four, .five, .six,
+.seven, .eight, .nine,
+.asterisk, .zero, .octothorp {
+    /* TODO: vertical text alignment using CSS grid, not this hack */
+    padding: 1.4em 2.8em;
+    margin: auto;
+}
+
+.dial, .clear {
+    /* TODO: vertical text alignment using CSS grid, not this hack */
+    padding: 1.4em 3.8em;
+    margin: auto;
+}
+.dial {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+}
+.clear {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+}
+
+/* Contact List tab */
+
+#contactList {
+    display: inline-block;
+    margin-top: 1em;
+    max-width: 420px;
+}
+#contactList .pure-button {
+    margin: 5px 0 !important;
+}
+
+/* Add Contact tab */
+
+#addContactContent .textBox {
+    width: 250px;
+    margin-bottom: 2em !important;
+}
+
+
+#successMessage {
+    color: green;
+    visibility: hidden;
+    font-style: italic;
+}
+
+/* Low Vision Toggle Link */
+#toggleLowVisionLink {
+    color: lightblue;
+}
