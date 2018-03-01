@@ -2,6 +2,7 @@ $(document).ready(function() {       //Do this when the document is loaded
     $("#dialerContent").show();      //Show the element with ID ""
     $("#contactListContent").hide(); //Hide the element with ID "contactListContent"
     $("#addContactContent").hide();
+    $("#aboutContent").hide();
     $("#dialerTab").addClass("current-tab");
 });
 
@@ -10,29 +11,44 @@ $("#dialerTab").click(function() { //When "dialerTab" is clicked
     $("#dialerContent").show();
     $("#contactListContent").hide();
     $("#addContactContent").hide();
+    $("#aboutContent").hide();
 
     $("#dialerTab").addClass("current-tab");
 	$("#contactListTab").removeClass("current-tab");
 	$("#addContactTab").removeClass("current-tab");
+    $("#aboutTab").removeClass("current-tab");
 });
 $("#contactListTab").click(function() { //When "contactListTab" is clicked
     $("#contactListContent").show();
     $("#dialerContent").hide();
     $("#addContactContent").hide();
-    $("#gesturePracticeContent").hide();
+    $("#aboutContent").hide();
 
     $("#contactListTab").addClass("current-tab");
     $("#dialerTab").removeClass("current-tab");
     $("#addContactTab").removeClass("current-tab");
+    $("#aboutTab").removeClass("current-tab");
 });
 $("#addContactTab").click(function() { //When "addContactTab" is clicked
     $("#addContactContent").show();
     $("#dialerContent").hide();
     $("#contactListContent").hide();
-    $("#gesturePracticeContent").hide();
+    $("#aboutContent").hide();
 
     $("#addContactTab").addClass("current-tab");
     $("#contactListTab").removeClass("current-tab");
+    $("#dialerTab").removeClass("current-tab");
+    $("#aboutTab").removeClass("current-tab");
+});
+$("#aboutTab").click(function() { //When "aboutTab" is clicked
+    $("#aboutContent").show();
+    $("#contactListContent").hide();
+    $("#addContactContent").hide();
+    $("#dialerContent").hide();
+
+    $("#aboutTab").addClass("current-tab");
+	$("#contactListTab").removeClass("current-tab");
+	$("#addContactTab").removeClass("current-tab");
     $("#dialerTab").removeClass("current-tab");
 });
 
