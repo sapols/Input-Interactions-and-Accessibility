@@ -168,34 +168,3 @@ $("#clearContactButton").click(function() {
     $("#phoneNumberInput").val("");
     $("#emailAddressInput").val("");
 });
-
-//Gesture Practice tab
-
-var mouseDownX = 0;
-var mouseDownY = 0;
-var mouseUpX = 0;
-var mouseUpY = 0;
-
-$("#gesture_area").mousedown(function(event) {
-    mouseDownX = event.pageX;
-    mouseDownY = event.pageY;
-    $("#gesture_output").val("mouse down");
-});
-$("#gesture_area").mouseup(function(event) {
-    mouseUpX = event.pageX;
-    mouseUpY = event.pageY;
-
-    if (mouseUpX < mouseDownX) {
-        $("#gesture_output").val("swipe left");
-    }
-    else if (mouseUpX > mouseDownX) {
-        $("#gesture_output").val("swipe right");
-    }
-    else {
-        $("#gesture_output").val("mouse up");
-    }
-});
-
-$("#gesture_area").mouseleave(function() {
-    $("#gesture_output").val("ready");
-});
