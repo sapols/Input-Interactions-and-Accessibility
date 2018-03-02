@@ -92,8 +92,26 @@
             <div id="aboutContent" style="">
 			    <h1>About this app</h1>
 			    <p>Low vision mode</p>
-                <p>TODO: Describe what you learned from your testing of the magnifier, and what design features you added to your low vision mode.</p>
-		    </div>
+                <br/>
+                <p>Things I learned using the magnifier:<br/>
+                    It is not as easy as one would think...<br/>
+                    It is rather easy for me to use the magnifier when it only follows my cursor, but it becomes significantly harder when I let it use my full screen.
+                    I was happy to learn that users have the option to choose between those two modes.
+                    I can see how using a screen reader could be more efficient than using the magnifier in some cases.
+                    There's just no getting around how arduous it is to scroll around a screen when magnification is turned up super high.
+                    Finding what you want to interact with can be challenging enough, let alone actually interacting with it.
+                    I do, however, rather like the feature when it's set to only magnify an area around the cursor;
+                    that allows me to still keep an overview of what's on my screen (decreasing search times), and I can hold a hotkey then scroll to increase/decrease the magnification as needed.
+                    My workflow was not bad when using the magnifier in this manner.</p>
+
+                <p>What changed: <br/>For this assignment, I created the "low vision mode" for my app. There are quite a few differences between this mode and the default mode, and they include:<br/>
+                    - A black background everywhere, with white text<br/>
+                    - All of my font sizes have increased to 200%<br/>
+                    - I am using an attribute class named "current-tab" which allows me to make active tabs have yellow text<br/>
+                    - I made the "Toggle Low Vision Mode" link light blue (instead of just blue) in the low vision mode to improve color contrast.<br/>
+                    - I increased the size of the input text boxes in my "Add Contact" form.<br/>
+                    - I actually had to change very little CSS because I applied styles to broad selectors (e.g., "h1", "p", "pure-button", etc.)</p>
+            </div>
             <div id="lowVisionToggle">
                 <br/>
                 <a id="toggleLowVisionLink" href="./index.html">Toggle Low Vision Mode</a>
