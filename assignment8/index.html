@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<title>
+			Calculator Demo
+		</title>
+		<link rel="stylesheet" href="calculator.css" type="text/css">
+	</head>
+	<body>
+		<div id="calculator">
+			<h1>calc U l8r</h1>
+			<div class="calculator_row">
+				<input id="number_input">
+			</div>
+			<div class="calculator_row">
+				<button id="button7" class="calcButton row1 col1">7</button>
+				<button id="button8" class="calcButton row1 col2">8</button>
+				<button id="button9" class="calcButton row1 col3">9</button>
+				<button id="buttonDivide" class="calcButton row1 col4 function">/</button>
+			</div>
+			<div class="calculator_row">
+				<button id="button4" class="calcButton row2 col1">4</button>
+				<button id="button5" class="calcButton row2 col2">5</button>
+				<button id="button6" class="calcButton row2 col3">6</button>
+				<button id="buttonMultiply" class="calcButton row2 col4 function">*</button>
+			</div>
+			<div class="calculator_row">
+				<button id="button1" class="calcButton row3 col1">1</button>
+				<button id="button2" class="calcButton row3 col2">2</button>
+				<button id="button3" class="calcButton row3 col3">3</button>
+				<button id="buttonAdd" class="calcButton row3 col4 function">+</button>
+			</div>
+			<div class="calculator_row">
+				<button id="button0" class="calcButton row4 col1">0</button>
+				<button id="buttonClear" class="calcButton row4 col2 meta">C</button>
+				<button id="buttonEquals" class="calcButton row4 col3 meta">=</button>
+				<button id="buttonSubtract" class="calcButton row4 col4 function">-</button>
+			</div>
+		</div>
+		<div id="switchMode">
+			Mode: 2-key
+		</div>
+		<div id="comments">
+			<h2>About this app</h2>
+			<p>This app is a switch-controlled calculator with the option of choosing between 2-key or 3-key interactions.</p>
+			<ul>
+				<li><h3>Instructions for using the app:</h3> The <strong>"a"</strong> key will select the next button, the <strong>"s"</strong> key will click the currently selected button, and the <strong>"q"</strong> key will select the previous button when in 3-key mode. Press the <strong>"m"</strong> key to toggle between 2-key and 3-key mode.</li>
+				<br/>
+				<li><h3>About the test:</h3> A test was performed to compare performance between the 2-key and 3-key modes. For each mode, three trials were run. A "trial" consisted of entering five different equations using the app, clicking "=" after each equation to get the answer and "C" to clear the calculator. Those equations were: 
+					<ul>
+						<li><strong>789+456</strong></li> 
+						<li><strong>321/2</strong></li>
+						<li><strong>5*5-1</strong></li> 
+						<li><strong>1000+2020-2</strong></li> 
+						<li><strong>753149/30.</strong></li>
+					</ul>
+				</li>
+				<br/>
+				<li><h3>Test results:</h3>
+					<ul>
+						<li><strong>2-key Trial 1: </strong>Time taken was 2 minutes 14 seconds, and 1 error was made (hit 4 instead of 5).</li>
+						<li><strong>2-key Trial 2: </strong>Time taken was 1 minute 53 seconds, and 0 errors were made.</li>
+						<li><strong>2-key Trial 3: </strong>Time taken was 1 minute 52 seconds, and 1 error was made (skipped the 1 button and had to cycle back around).</li>
+						<br/>
+						<li><strong>3-key Trial 1: </strong>Time taken was 2 minutes 18 seconds, and 1 error was made (hit "select" instead of "previous" in the middle of an equation and had to clear then start that equation over).</li>
+						<li><strong>3-key Trial 2: </strong>Time taken was 1 minute 30 seconds, and 0 errors were made.</li>
+						<li><strong>3-key Trial 3: </strong>Time taken was 1 minute 31 seconds, and 0 errors were made.</li>
+						<br/>
+						<h3>Conclusions:</h3>
+						<p>For 2-key mode, the average time taken was 1 minute 59.67 seconds and the average error rate was 1.334 errors per trial. For 3-key mode, the average time taken was 1 minute 46.33 seconds and the average error rate was 0.334 errors per trial. From this, keeping in mind the tiny sample size, one might conclude that 2-key mode is marginally slower and more error-prone than 3-key mode. The one error made in trial 1 of 3-key mode is noteworthy, however, because it demonstrates the bigger cognitive load placed on 3-key users.</p>
+
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+		<script src="calculator.js" type="text/javascript"></script>
+	</body>
+</html>
